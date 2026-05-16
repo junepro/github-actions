@@ -1,10 +1,10 @@
-name: Artfacts
+name: Artifacts
 on:
   workflow_dispatch:
-    
+
 jobs:
   artifact-producer:
-    name: Produce
+    name: Produce artifact
     runs-on: ubuntu-24.04
     steps:
       - name: Create artifact file
@@ -19,7 +19,7 @@ jobs:
           path: artifact.txt
 
   artifact-consumer:
-    name: Consume
+    name: Consume artifact
     runs-on: ubuntu-24.04
     needs: artifact-producer
     steps:
